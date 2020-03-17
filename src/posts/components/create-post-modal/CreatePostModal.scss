@@ -1,0 +1,50 @@
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  
+  &__layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: #00000047;
+  }
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 15px;
+    z-index: 3;
+  }
+
+  &__title {
+    margin: 10px 0;
+  }
+
+  &__input-name {
+    height: 35px;
+    width: 300px;
+    padding: 10px;
+  }
+
+  &__textarea {
+    height: 75px;
+    width: 100%;
+    padding: 10px;
+    resize: none;
+    margin-bottom: 10px;
+  }
+
+  &__create-btn {
+    height: 30px;
+  }
+}

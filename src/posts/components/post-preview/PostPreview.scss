@@ -1,0 +1,62 @@
+.post-preview {
+  margin: 25px 0;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  &__data {
+    min-width: 95px;
+    font-size: 10px;
+    text-align: right;
+    color: #999;
+  }
+  
+  &__comments {
+    font-size: 12px;
+    color: brown;
+  }
+  
+  &__title {
+    margin: 0 40px 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    &:hover {
+      text-shadow: 2px 3px 1px rgba(200, 200, 200, 0.9);
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #aaa;
+    cursor: pointer;
+    
+    &:hover {
+      color: #555;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    height: 95px;
+    padding: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

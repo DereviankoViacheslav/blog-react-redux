@@ -1,0 +1,49 @@
+.post {
+  margin: 25px 0;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  &__title {
+    margin: 0 40px 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  &__controls {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #aaa;
+    cursor: pointer;
+    
+    &:hover {
+      color: #555;
+    }
+  }
+  
+  &__content-wrapper {
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  &__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  &__comments {
+    padding: 20px 50px;
+    border-top: 1px solid #ccc;
+  }
+}

@@ -1,0 +1,24 @@
+.comments {
+  text-align: center;
+
+  &__textarea {
+    height: 75px;
+    width: 100%;
+    padding: 10px;
+    resize: none;
+  }
+
+  &__create-btn {
+    height: 30px;
+    width: 100px;
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-top: 20px;
+  }
+}
