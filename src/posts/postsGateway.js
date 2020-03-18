@@ -17,7 +17,7 @@ export const fetchSinglePost = async (id) => {
 export const addComment = async (comment) => {
   const configObject = {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json;charset=utf-8', },
+    headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify(comment),
   };
   const url = `${baseUrl}/comments`;
@@ -29,7 +29,7 @@ export const addComment = async (comment) => {
 export const addPost = async (post) => {
   const configObject = {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json;charset=utf-8', },
+    headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify(post),
   };
   const url = `${baseUrl}/posts`;
@@ -49,7 +49,7 @@ export const deletePost = async (id) => {
 export const updatePost = async ({ id, ...post }) => {
   const configObject = {
     method: 'PUT',
-    headers: { 'Content-Type': 'application/json;charset=utf-8', },
+    headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify(post),
   };
   const url = `${baseUrl}/posts/${id}`;

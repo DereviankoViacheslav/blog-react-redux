@@ -1,6 +1,7 @@
 import './Comments.scss';
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import * as postsActions from '../../posts.actions';
 
 const Comments = ({ comments, postId, createComment }) => {
@@ -33,6 +34,16 @@ const Comments = ({ comments, postId, createComment }) => {
       </ul>
     </div>
   );
+};
+
+Comments.propTypes = {
+  createComment: PropTypes.func.isRequired,
+  postId: PropTypes.number.isRequired,
+  comments: PropTypes.array,
+};
+
+Comments.defaultProps = {
+  comments: [],
 };
 
 const mapDispatchToProps = {

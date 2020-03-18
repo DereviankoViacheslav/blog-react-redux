@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as postsActions from '../../posts.actions';
 import { singlePostSelector } from '../../posts.selectors';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import PostView from '../post-view';
 import CreatePostModal from '../create-post-modal';
 
@@ -27,6 +28,15 @@ const Post = ({ getSinglePost, singlePost }) => {
       {singlePost && <PostView {...singlePost} handleOpenModal={handleOpenModal} />}
     </>
   );
+};
+
+Post.propTypes = {
+  getSinglePost: PropTypes.func.isRequired,
+  singlePost: PropTypes.object,
+};
+
+Post.defaultProps = {
+  singlePost: null,
 };
 
 const mapStateToProps = (state) => {

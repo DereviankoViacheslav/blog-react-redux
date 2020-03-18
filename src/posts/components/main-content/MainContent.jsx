@@ -2,6 +2,7 @@ import './MainContent.scss';
 import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import * as postsActions from '../../posts.actions';
 import PostsList from '../posts-list'
 import Post from '../post'
@@ -20,6 +21,10 @@ const MainContent = ({ getPostsList }) => {
       </Switch>
     </main>
   );
+};
+
+MainContent.propTypes = {
+  getPostsList: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = {

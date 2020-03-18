@@ -1,6 +1,7 @@
 import './CreatePostModal.scss';
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import * as postsActions from '../../posts.actions';
 
 const CreatePostModal = (props) => {
@@ -44,6 +45,21 @@ const CreatePostModal = (props) => {
       </div>
     </div>
   );
+};
+
+CreatePostModal.propTypes = {
+  handleOpenModal: PropTypes.func.isRequired,
+  createPost: PropTypes.func.isRequired,
+  editPost: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  id: PropTypes.number,
+};
+
+CreatePostModal.defaultProps = {
+  title: '',
+  body: '',
+  id: undefined,
 };
 
 const mapDispatchToProps = {

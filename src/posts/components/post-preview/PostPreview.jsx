@@ -1,6 +1,7 @@
 import './PostPreview.scss';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const PostPreview = ({ id, title, body }) => {
   const history = useHistory();
@@ -19,6 +20,18 @@ const PostPreview = ({ id, title, body }) => {
       </div>
     </div>
   );
-}
+};
+
+PostPreview.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string,
+  id: PropTypes.number,
+};
+
+PostPreview.defaultProps = {
+  title: '',
+  body: '',
+  id: undefined,
+};
 
 export default PostPreview;

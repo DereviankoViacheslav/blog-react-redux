@@ -4,18 +4,16 @@ import { postsListSelector } from './posts.selectors';
 export const POSTS_LIST_RECIEVED = 'POSTS_LIST_RECIEVED';
 export const SINGLE_POST_RECIEVED = 'SINGLE_POST_RECIEVED';
 
-export const singlePostRecieved = (singlePost) => {
-  return {
-    type: SINGLE_POST_RECIEVED,
-    payload: { singlePost },
-  };
-};
+export const singlePostRecieved = (singlePost) => ({
+  type: SINGLE_POST_RECIEVED,
+  payload: { singlePost },
+});
 
 export const getSinglePost = (postId) => {
   const thunkAction = (dispatch) => {
     postsGateway.fetchSinglePost(postId)
-      .then(post => {
-        dispatch(singlePostRecieved(post))
+      .then((post) => {
+        dispatch(singlePostRecieved(post));
       });
   };
   return thunkAction;
@@ -29,18 +27,16 @@ export const createComment = (comment) => {
   return thunkAction;
 };
 
-export const postsListRecieved = (postsList) => {
-  return {
-    type: POSTS_LIST_RECIEVED,
-    payload: { postsList },
-  };
-};
+export const postsListRecieved = (postsList) => ({
+  type: POSTS_LIST_RECIEVED,
+  payload: { postsList },
+});
 
 export const getPostsList = () => {
   const thunkAction = (dispatch) => {
     postsGateway.fetchPosts()
-      .then(postsList => {
-        dispatch(postsListRecieved(postsList))
+      .then((postsList) => {
+        dispatch(postsListRecieved(postsList));
       });
   };
   return thunkAction;
@@ -52,7 +48,7 @@ export const editPost = (postId, newDataPost) => {
     const oldPost = posts.find(({ id }) => id === postId);
     const newPost = {
       ...oldPost,
-      ...newDataPost
+      ...newDataPost,
     };
     postsGateway.updatePost(newPost)
       .then(() => {

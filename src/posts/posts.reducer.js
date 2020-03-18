@@ -10,12 +10,12 @@ export default function reduser(state = initialState, action) {
     case POSTS_LIST_RECIEVED:
       return {
         ...state,
-        postsList: [...action.payload.postsList]
+        postsList: [...action.payload.postsList],
       };
     case SINGLE_POST_RECIEVED:
       return {
         ...state,
-        singlePost: action.payload.singlePost
+        singlePost: action.payload.singlePost,
       };
     default: return state;
   }

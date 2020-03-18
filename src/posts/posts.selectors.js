@@ -1,7 +1,3 @@
-export const postsListSelector = (state) => {
-  return state.posts.postsList;
-};
+export const postsListSelector = (state) => state.posts.postsList;
 
-export const singlePostSelector = (state) => {
-  return state.posts.singlePost;
-};
+export const singlePostSelector = (state) => state.posts.singlePost;
